@@ -1,0 +1,9 @@
+# Robots.txt for Ranchi Home Appliance Repair & Service
+User-agent: *
+Allow: /
+
+# Disallow private admin dashboard routes
+Disallow: /admin/
+
+# Sitemap Location
+Sitemap: https://ranchirepair.in/sitemap.xml
