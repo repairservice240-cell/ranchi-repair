@@ -118,9 +118,21 @@ export interface ServiceBookingLead {
   status: 'New' | 'Contacted' | 'Assigned' | 'Completed';
 }
 
+export interface AuthUser {
+  id: string;
+  name: string;
+  mobile: string;
+  email?: string;
+  role: 'customer' | 'technician' | 'admin';
+  locality?: string;
+  avatar?: string;
+  token?: string;
+}
+
 export interface EventLog {
   id: string;
   eventType: 'call_click' | 'whatsapp_click' | 'book_service_click' | 'form_start' | 'form_submit' | 'service_page_view' | 'locality_page_view';
   label: string;
   timestamp: string;
 }
+

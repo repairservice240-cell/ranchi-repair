@@ -3,8 +3,8 @@ import { BusinessInfo, SocialLinks, ApplianceService, RanchiLocality, CustomerRe
 export const initialBusinessInfo: BusinessInfo = {
   companyName: 'Ranchi Repair',
   tagline: 'Expert Doorstep Appliance Repair Service',
-  logo: '/favicon.svg',
-  favicon: '/favicon.svg',
+  logo: '/logo.png',
+  favicon: '/logo.png',
   phone: '8229893196',
   whatsapp: '8229893196',
   email: 'repairservice240@gmail.com',

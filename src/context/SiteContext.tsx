@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { 
   BusinessInfo, SocialLinks, AnalyticsConfig, ApplianceService, 
-  RanchiLocality, CustomerReview, FaqItem, BlogPost, ServiceBookingLead, EventLog 
+  RanchiLocality, CustomerReview, FaqItem, BlogPost, ServiceBookingLead, EventLog, AuthUser
 } from '../types';
 import { 
   initialBusinessInfo, initialSocialLinks, initialSupportedBrands, 
@@ -34,6 +34,9 @@ interface SiteContextType {
   updateLeadStatus: (leadId: string, status: ServiceBookingLead['status']) => void;
   events: EventLog[];
   trackEvent: (eventType: EventLog['eventType'], label: string) => void;
+  currentUser: AuthUser | null;
+  loginUser: (user: AuthUser) => void;
+  logoutUser: () => void;
   resetToDefaults: () => void;
 }
 
@@ -58,6 +61,7 @@ const STORAGE_KEYS = {
   BLOGS: 'ranchi_repair_blogs_v1',
   LEADS: 'ranchi_repair_leads_v1',
   EVENTS: 'ranchi_repair_events_v1',
+  USER: 'ranchi_repair_user_v1',
 };
 
 export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -234,6 +238,21 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setLeads(prev => prev.map(l => l.id === leadId ? { ...l, status } : l));
   };
 
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(() => {
+    const saved = localStorage.getItem(STORAGE_KEYS.USER);
+    return saved ? JSON.parse(saved) : null;
+  });
+
+  const loginUser = (user: AuthUser) => {
+    setCurrentUser(user);
+    localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(user));
+  };
+
+  const logoutUser = () => {
+    setCurrentUser(null);
+    localStorage.removeItem(STORAGE_KEYS.USER);
+  };
+
   const trackEvent = (eventType: EventLog['eventType'], label: string) => {
     const newEvent: EventLog = {
       id: `evt-${Date.now()}-${Math.random().toString(36).substring(2, 5)}`,
@@ -256,6 +275,7 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setFaqs(initialFaqs);
     setLeads([]);
     setEvents([]);
+    setCurrentUser(null);
   };
 
   return (
@@ -285,6 +305,9 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({ children
       updateLeadStatus,
       events,
       trackEvent,
+      currentUser,
+      loginUser,
+      logoutUser,
       resetToDefaults
     }}>
       {children}

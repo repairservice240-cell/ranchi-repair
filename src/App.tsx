@@ -23,6 +23,9 @@ import { BlogPage } from './pages/BlogPage';
 import { LegalPages } from './pages/LegalPages';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { AdminPage } from './pages/AdminPage';
+import { LoginPage } from './pages/LoginPage';
+import { CustomerDashboardPage } from './pages/CustomerDashboardPage';
+import { TechnicianDashboardPage } from './pages/TechnicianDashboardPage';
 
 // Booking Modal overlay wrapper
 interface BookingModalProps {
@@ -76,7 +79,7 @@ const AppContent: React.FC = () => {
   const [successLead, setSuccessLead] = useState<ServiceBookingLead | null>(null);
   const { pathname } = useLocation();
 
-  const isAdminPage = pathname.startsWith('/admin');
+  const hideHeaderFooter = pathname.startsWith('/admin') || pathname.startsWith('/login') || pathname.startsWith('/portal');
 
   const openBooking = (serviceSlug?: string, localityName?: string) => {
     setBookingServiceSlug(serviceSlug);
@@ -93,7 +96,7 @@ const AppContent: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
 
-      {!isAdminPage && <Header onOpenBooking={openBooking} />}
+      {!hideHeaderFooter && <Header onOpenBooking={openBooking} />}
 
       <main className="flex-1">
         <Routes>
@@ -132,6 +135,16 @@ const AppContent: React.FC = () => {
           <Route path="/terms-and-conditions/" element={<LegalPages />} />
           <Route path="/cancellation-policy/" element={<LegalPages />} />
 
+          {/* Auth & Portal Pages */}
+          <Route path="/login/" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/portal/" element={<LoginPage />} />
+          <Route path="/portal" element={<LoginPage />} />
+          <Route path="/dashboard/" element={<CustomerDashboardPage onOpenBooking={openBooking} />} />
+          <Route path="/dashboard" element={<CustomerDashboardPage onOpenBooking={openBooking} />} />
+          <Route path="/technician/" element={<TechnicianDashboardPage />} />
+          <Route path="/technician" element={<TechnicianDashboardPage />} />
+
           {/* Admin */}
           <Route path="/admin/*" element={<AdminPage />} />
 
@@ -140,8 +153,8 @@ const AppContent: React.FC = () => {
         </Routes>
       </main>
 
-      {!isAdminPage && <Footer />}
-      {!isAdminPage && <StickyMobileBar onOpenBooking={openBooking} />}
+      {!hideHeaderFooter && <Footer />}
+      {!hideHeaderFooter && <StickyMobileBar onOpenBooking={openBooking} />}
 
       {/* Global Booking Modal */}
       <BookingModal

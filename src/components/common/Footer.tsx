@@ -37,13 +37,12 @@ export const Footer: React.FC = () => {
 
             {/* Col 1 – Brand */}
             <div className="space-y-4">
-              <Link to="/" className="group flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/35 border border-blue-400/30 group-hover:scale-105 transition-transform duration-300">
-                  <span className="text-white font-black text-xl">R</span>
-                </div>
-                <span className="text-white font-black text-lg tracking-tight group-hover:text-blue-400 transition-colors">
-                  {businessInfo.companyName}
-                </span>
+              <Link to="/" className="group inline-block">
+                <img
+                  src="/logo.png"
+                  alt={businessInfo.companyName}
+                  className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                />
               </Link>
 
               <p className="text-xs text-slate-300 leading-relaxed font-medium">
@@ -61,14 +60,14 @@ export const Footer: React.FC = () => {
                   onClick={handleCall}
                   className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-xl text-xs font-extrabold border border-blue-500/30 transition-all shadow-xs group"
                 >
-                  <Phone className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors" />
-                  <span>Call Now</span>
+                  <Phone className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors shrink-0" />
+                  <span>{businessInfo.phone}</span>
                 </button>
                 <button
                   onClick={handleWhatsApp}
                   className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white rounded-xl text-xs font-extrabold border border-emerald-500/30 transition-all shadow-xs group"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors" />
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors shrink-0" />
                   <span>WhatsApp</span>
                 </button>
               </div>
@@ -165,7 +164,7 @@ export const Footer: React.FC = () => {
               >
                 <span className="w-2 h-2 rounded-full bg-white animate-ping shrink-0" />
                 <Phone className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
-                <span>Call Now</span>
+                <span>Call {businessInfo.phone}</span>
               </a>
 
               <button
