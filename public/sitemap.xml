@@ -1,73 +1,478 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ===== HOMEPAGE ===== -->
   <url>
     <loc>https://ranchirepair.in/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ===== MAIN PAGES ===== -->
   <url>
     <loc>https://ranchirepair.in/services/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ranchirepair.in/ac-repair/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/washing-machine-repair/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/refrigerator-repair/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/microwave-repair/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/geyser-repair/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/service-areas/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ranchirepair.in/service-areas/ranchi/</loc>
+    <loc>https://ranchirepair.in/book-service/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ranchirepair.in/about-us/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ranchirepair.in/contact/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ranchirepair.in/reviews/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ranchirepair.in/faq/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== SERVICE PAGES ===== -->
+  <url>
+    <loc>https://ranchirepair.in/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ===== SERVICE AREAS ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ===== LOCALITY PAGES (Published & Indexable) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/doranda/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (morabadi) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/morabadi/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (kanke) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/kanke/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (doranda) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/doranda/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/doranda/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/doranda/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/doranda/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- doranda/geyser-repair is disabled so excluded -->
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (harmu) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/harmu/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (hatia) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/hatia/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (lalpur) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/lalpur/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (ashok-nagar) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ashok-nagar/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (bariatu) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/bariatu/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== LOCALITY + SERVICE COMBO PAGES (ratu-road) ===== -->
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/ac-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/washing-machine-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/refrigerator-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/microwave-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/service-areas/ranchi/ratu-road/geyser-repair/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== BLOG PAGES ===== -->
+  <url>
+    <loc>https://ranchirepair.in/blog/</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ranchirepair.in/contact/</loc>
+    <loc>https://ranchirepair.in/blog/why-is-my-ac-not-cooling-ranchi/</loc>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://ranchirepair.in/book-service/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://ranchirepair.in/blog/washing-machine-maintenance-tips-ranchi/</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
+
+  <!-- ===== LEGAL PAGES ===== -->
+  <url>
+    <loc>https://ranchirepair.in/privacy-policy/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/terms-and-conditions/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ranchirepair.in/cancellation-policy/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
