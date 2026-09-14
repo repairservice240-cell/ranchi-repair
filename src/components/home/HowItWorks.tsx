@@ -10,14 +10,14 @@ const steps = [
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-slate-50/60">
+    <section id="how-it-works" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <div className="inline-block px-3.5 py-1 bg-blue-50 text-blue-800 border border-blue-200 rounded-full text-xs font-extrabold uppercase tracking-wider mb-3">
             Simple 4-Step Process
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">How It Works</h2>
-          <p className="text-slate-500 text-base max-w-xl mx-auto font-medium">Fast, reliable doorstep appliance repair across Ranchi</p>
+          <p className="text-slate-600 text-base max-w-xl mx-auto font-medium">Fast, reliable doorstep appliance repair across Ranchi</p>
         </div>
 
         <div className="grid md:grid-cols-4 gap-6">
@@ -25,13 +25,13 @@ export const HowItWorks: React.FC = () => {
             const Icon = s.icon;
             return (
               <div key={s.step} className="relative group">
-                <div className="bg-white border border-slate-200/90 rounded-3xl p-6 text-center transition-all duration-300 h-full flex flex-col items-center justify-between shadow-xs hover:shadow-xl hover:shadow-blue-600/10 hover:border-blue-600 hover:-translate-y-1">
+                <div className="bg-white border border-slate-200/90 rounded-2xl p-6 text-center transition-all duration-300 h-full flex flex-col items-center justify-between shadow-sm hover:shadow-md hover:border-blue-500 hover:-translate-y-0.5">
                   {/* Step Icon Badge */}
                   <div className="relative mb-5">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-600 via-blue-600 to-blue-700 text-white rounded-2xl flex items-center justify-center text-xl font-extrabold shadow-md shadow-blue-600/25 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform duration-300">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-6 h-6 bg-slate-900 text-blue-300 rounded-full font-black text-xs flex items-center justify-center shadow-sm">
+                    <span className="absolute -top-2 -right-2 w-6 h-6 bg-orange-500 text-white rounded-full font-extrabold text-xs flex items-center justify-center shadow-sm">
                       {s.step}
                     </span>
                   </div>
@@ -39,7 +39,7 @@ export const HowItWorks: React.FC = () => {
                   {/* Text Content */}
                   <div>
                     <h3 className="font-extrabold text-slate-900 mb-2 text-base group-hover:text-blue-600 transition-colors">{s.title}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed font-medium">{s.desc}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal">{s.desc}</p>
                   </div>
                 </div>
 

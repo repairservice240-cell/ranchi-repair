@@ -14,21 +14,17 @@ export const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white relative overflow-hidden shadow-2xl border-y border-blue-900/40">
-      
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/15 blur-[120px] pointer-events-none rounded-full" />
-
+    <section className="py-16 md:py-24 bg-slate-50/70 border-y border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold uppercase tracking-wider mb-3">
-            <MessageSquareQuote className="w-3.5 h-3.5 text-blue-400" />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-100 text-orange-600 border border-orange-200 text-xs font-bold uppercase tracking-wider mb-3">
+            <MessageSquareQuote className="w-3.5 h-3.5 text-orange-500" />
             <span>Verified Ranchi Reviews</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-3">Customer Testimonials</h2>
-          <p className="text-slate-300 text-base max-w-xl mx-auto font-medium">See what our happy customers in Ranchi say about our doorstep repair service</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Customer Testimonials</h2>
+          <p className="text-slate-600 text-base max-w-xl mx-auto font-medium">See what our happy customers in Ranchi say about our doorstep repair service</p>
         </div>
 
         {/* Testimonials Grid */}
@@ -36,10 +32,10 @@ export const TestimonialsSection: React.FC = () => {
           {displayReviews.map((rev) => (
             <div
               key={rev.id}
-              className="group relative bg-white hover:bg-slate-50/90 border border-slate-200/90 hover:border-blue-400 p-6 sm:p-7 rounded-3xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 flex flex-col justify-between hover:-translate-y-1 overflow-hidden"
+              className="group relative bg-white hover:bg-slate-50/50 border border-slate-200/80 hover:border-blue-400 p-6 sm:p-7 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between hover:-translate-y-0.5 overflow-hidden"
             >
               {/* Background Quote Icon Accent */}
-              <Quote className="absolute top-5 right-5 w-10 h-10 text-blue-100 group-hover:text-blue-200 transition-colors pointer-events-none" />
+              <Quote className="absolute top-5 right-5 w-10 h-10 text-blue-50 group-hover:text-blue-100 transition-colors pointer-events-none" />
 
               <div>
                 {/* Rating & Verified Badge */}
@@ -55,22 +51,22 @@ export const TestimonialsSection: React.FC = () => {
                 </div>
 
                 {/* Comment */}
-                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium mb-6 relative z-10">
+                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-normal mb-6 relative z-10">
                   "{rev.comment}"
                 </p>
               </div>
 
               {/* Customer Avatar & Details Footer */}
               <div className="border-t border-slate-100 pt-4 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white flex items-center justify-center font-black text-sm shadow-md shadow-blue-600/25 shrink-0">
+                <div className="w-10 h-10 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-md shadow-blue-600/20 shrink-0">
                   {rev.customerName.charAt(0)}
                 </div>
                 <div>
                   <p className="font-extrabold text-slate-900 text-sm group-hover:text-blue-600 transition-colors">
                     {rev.customerName}
                   </p>
-                  <p className="text-xs text-blue-700 font-bold">
-                    {rev.locality}, Ranchi • <span className="text-slate-500 font-medium">{rev.service}</span>
+                  <p className="text-xs text-blue-600 font-bold">
+                    {rev.locality}, Ranchi • <span className="text-slate-500 font-normal">{rev.service}</span>
                   </p>
                 </div>
               </div>
@@ -79,10 +75,10 @@ export const TestimonialsSection: React.FC = () => {
         </div>
 
         {/* Read All Reviews Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <Link
             to="/reviews/"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm shadow-lg shadow-blue-600/30 transition-all active:scale-95 border border-blue-400/30"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm shadow-md transition-all active:scale-95"
           >
             <span>Read All Ranchi Customer Reviews</span>
             <ArrowRight className="w-4 h-4" />

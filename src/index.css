@@ -23,6 +23,11 @@
     overflow-x: hidden;
   }
 
+  :root {
+    --accent-orange: #f97316;
+    --accent-blue: #2563eb;
+  }
+
   :focus-visible {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
@@ -34,7 +39,7 @@
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #f8fafc;
+    background: #f1f5f9;
   }
   ::-webkit-scrollbar-thumb {
     background: #cbd5e1;
@@ -63,6 +68,38 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+  }
+
+  /* Nav link underline animation */
+  .nav-link {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #475569;
+    transition: color 0.2s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #f97316;
+    border-radius: 2px;
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover {
+    color: #f97316;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  .nav-link.active {
+    color: #f97316;
+  }
+  .nav-link.active::after {
+    width: 100%;
   }
 }
 

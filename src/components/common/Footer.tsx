@@ -25,15 +25,12 @@ export const Footer: React.FC = () => {
   return (
     <>
       {/* Top Gradient Accent Divider Bar */}
-      <div className="w-full h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-indigo-600 shadow-md relative z-20" />
+      <div className="w-full h-1 bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600 relative z-20" />
 
-      <footer className="bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white relative overflow-hidden shadow-2xl border-t border-blue-900/40 pt-16 pb-36 lg:pb-16">
+      <footer className="bg-slate-900 text-white relative pt-16 pb-36 lg:pb-16 border-t border-slate-800">
         
-        {/* Background Radial Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/15 blur-[120px] pointer-events-none rounded-full" />
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 pb-12 border-b border-slate-800/80">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
 
             {/* Col 1 – Brand */}
             <div className="space-y-4">
@@ -45,12 +42,12 @@ export const Footer: React.FC = () => {
                 />
               </Link>
 
-              <p className="text-xs text-slate-300 leading-relaxed font-medium">
+              <p className="text-xs text-slate-300 leading-relaxed font-normal">
                 {taglineText}. Serving Ranchi, Jharkhand with certified doorstep technicians.
               </p>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-extrabold shadow-xs">
-                <MapPin className="w-3.5 h-3.5 text-blue-400" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-900/60 text-blue-300 border border-blue-700/50 text-xs font-bold">
+                <MapPin className="w-3.5 h-3.5 text-orange-400" />
                 <span>Serving Ranchi, Jharkhand Only</span>
               </div>
 
@@ -58,16 +55,16 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2.5 pt-2">
                 <button
                   onClick={handleCall}
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white rounded-xl text-xs font-extrabold border border-blue-500/30 transition-all shadow-xs group"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm group"
                 >
-                  <Phone className="w-3.5 h-3.5 text-blue-400 group-hover:text-white transition-colors shrink-0" />
+                  <Phone className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>{businessInfo.phone}</span>
                 </button>
                 <button
                   onClick={handleWhatsApp}
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white rounded-xl text-xs font-extrabold border border-emerald-500/30 transition-all shadow-xs group"
+                  className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold transition-all shadow-sm group"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400 group-hover:text-white transition-colors shrink-0" />
+                  <MessageCircle className="w-3.5 h-3.5 text-white shrink-0" />
                   <span>WhatsApp</span>
                 </button>
               </div>
@@ -76,7 +73,7 @@ export const Footer: React.FC = () => {
             {/* Col 2 – Areas */}
             <div>
               <h3 className="text-white font-extrabold text-sm mb-4 tracking-wider uppercase flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                 Ranchi Service Areas
               </h3>
               <ul className="space-y-2.5">
@@ -84,15 +81,15 @@ export const Footer: React.FC = () => {
                   <li key={l.id}>
                     <Link
                       to={`/service-areas/ranchi/${l.slug}/`}
-                      className="group flex items-center gap-2 text-xs text-slate-300 hover:text-blue-400 font-medium transition-all duration-200"
+                      className="group flex items-center gap-2 text-xs text-slate-300 hover:text-blue-400 font-normal transition-all duration-200"
                     >
-                      <span className="w-1 h-1 rounded-full bg-slate-700 group-hover:bg-blue-400 group-hover:scale-125 transition-all shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-blue-400 group-hover:scale-125 transition-all shrink-0" />
                       <span className="group-hover:translate-x-1 transition-transform">{l.name}</span>
                     </Link>
                   </li>
                 ))}
                 <li className="pt-1">
-                  <Link to="/service-areas/" className="text-xs font-extrabold text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1">
+                  <Link to="/service-areas/" className="text-xs font-bold text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-1">
                     <span>View All Areas</span>
                     <span>→</span>
                   </Link>
@@ -100,10 +97,10 @@ export const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Col 4 – Company Info */}
+            {/* Col 3 – Company Info */}
             <div>
               <h3 className="text-white font-extrabold text-sm mb-4 tracking-wider uppercase flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                 Company
               </h3>
               <ul className="space-y-2.5 mb-5">
@@ -119,21 +116,21 @@ export const Footer: React.FC = () => {
                   <li key={l.href}>
                     <Link
                       to={l.href}
-                      className="group flex items-center gap-2 text-xs text-slate-300 hover:text-blue-400 font-medium transition-all duration-200"
+                      className="group flex items-center gap-2 text-xs text-slate-300 hover:text-blue-400 font-normal transition-all duration-200"
                     >
-                      <span className="w-1 h-1 rounded-full bg-slate-700 group-hover:bg-blue-400 group-hover:scale-125 transition-all shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-blue-400 group-hover:scale-125 transition-all shrink-0" />
                       <span className="group-hover:translate-x-1 transition-transform">{l.label}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex items-start gap-2 text-xs text-slate-300 font-medium">
-                <Clock className="w-3.5 h-3.5 mt-0.5 text-amber-400 shrink-0" />
+              <div className="flex items-start gap-2 text-xs text-slate-300 font-normal">
+                <Clock className="w-3.5 h-3.5 mt-0.5 text-orange-400 shrink-0" />
                 <span>{hoursText}</span>
               </div>
               
-              <div className="flex items-start gap-2 text-xs text-slate-300 font-medium mt-2">
+              <div className="flex items-start gap-2 text-xs text-slate-300 font-normal mt-2">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 text-blue-400 shrink-0" />
                 <span>{addressText}, Ranchi</span>
               </div>
@@ -141,16 +138,16 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Footer CTA Section */}
-          <div className="my-8 py-6 px-6 sm:px-8 bg-slate-800/40 rounded-3xl border border-slate-700/60 backdrop-blur-xs flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="my-8 py-6 px-6 sm:px-8 bg-slate-800/80 rounded-2xl border border-slate-700/80 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left space-y-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-extrabold">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/60 text-blue-300 border border-blue-700/50 text-xs font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 <span>24/7 Fast Doorstep Technician Response</span>
               </div>
-              <h4 className="text-lg sm:text-xl font-black text-white tracking-tight">
+              <h4 className="text-lg sm:text-xl font-extrabold text-white tracking-tight">
                 Need Urgent Appliance Repair in Ranchi?
               </h4>
-              <p className="text-xs sm:text-sm text-slate-300 font-medium">
+              <p className="text-xs sm:text-sm text-slate-300 font-normal">
                 Connect directly with certified technicians for instant booking & doorstep service.
               </p>
             </div>
@@ -159,17 +156,16 @@ export const Footer: React.FC = () => {
               <a
                 href={`tel:${businessInfo.phone}`}
                 onClick={handleCall}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-lg shadow-emerald-600/35 border border-emerald-400/40 animate-pulse hover:animate-none hover:-translate-y-0.5 active:scale-95 group cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md active:scale-95 group cursor-pointer"
                 id="footer-call-btn"
               >
-                <span className="w-2 h-2 rounded-full bg-white animate-ping shrink-0" />
-                <Phone className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+                <Phone className="w-4 h-4 text-white" />
                 <span>Call {businessInfo.phone}</span>
               </a>
 
               <button
                 onClick={handleWhatsApp}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md shadow-blue-600/30 hover:shadow-lg hover:shadow-blue-600/40 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md active:scale-95 cursor-pointer"
                 id="footer-whatsapp-btn"
               >
                 <MessageCircle className="w-4 h-4 text-white" />
@@ -179,9 +175,9 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-medium">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-normal">
             <p>© {new Date().getFullYear()} {businessInfo.companyName}. All rights reserved. Serving Ranchi, Jharkhand.</p>
-            <p className="font-bold text-blue-400">Home Appliance Repair &amp; Service in Ranchi</p>
+            <p className="font-bold text-orange-400">Home Appliance Repair &amp; Service in Ranchi</p>
           </div>
         </div>
       </footer>

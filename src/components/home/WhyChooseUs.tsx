@@ -26,21 +26,17 @@ const features = [
 
 export const WhyChooseUs: React.FC = () => {
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white relative overflow-hidden shadow-2xl border-y border-blue-900/40">
-      
-      {/* Background Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/15 blur-[120px] pointer-events-none rounded-full" />
-
+    <section id="why-us" className="py-16 md:py-24 bg-blue-50/50 border-y border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold uppercase tracking-wider mb-3">
-            <Award className="w-3.5 h-3.5 text-blue-400" />
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-100 text-orange-600 border border-orange-200 text-xs font-bold uppercase tracking-wider mb-3">
+            <Award className="w-3.5 h-3.5 text-orange-500" />
             <span>Why Ranchi Trusts Us</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-3">Why Choose Us</h2>
-          <p className="text-slate-300 text-base max-w-xl mx-auto font-medium">Quality you can trust, service you can depend on</p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Why Choose Us</h2>
+          <p className="text-slate-600 text-base max-w-xl mx-auto font-medium">Quality you can trust, service you can depend on</p>
         </div>
 
         {/* Feature Cards Grid */}
@@ -48,16 +44,16 @@ export const WhyChooseUs: React.FC = () => {
           {features.map((f, i) => (
             <div
               key={i}
-              className="group bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-blue-500/60 p-6 sm:p-7 rounded-2xl sm:rounded-3xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-600/15 flex gap-5 hover:-translate-y-1 backdrop-blur-md"
+              className="group bg-white border border-slate-200/80 hover:border-blue-500 p-6 sm:p-7 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md flex gap-5 hover:-translate-y-0.5"
             >
               <div className="shrink-0">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-blue-600/30 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform">
                   {f.icon}
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-extrabold text-white mb-1 group-hover:text-blue-300 transition-colors">{f.title}</h3>
-                <p className="text-sm text-slate-300 leading-relaxed font-medium">{f.desc}</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">{f.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed font-normal">{f.desc}</p>
               </div>
             </div>
           ))}
