@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = () => {
             className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xs sm:text-sm transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-95 group"
             id="header-call-btn"
           >
-            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0 animate-phone-ring" />
             <span className="whitespace-nowrap">+91 {businessInfo.phone}</span>
           </a>
 

@@ -33,7 +33,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = () => {
           onClick={handleCallClick}
           className="flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs text-center"
         >
-          <Phone className="w-4 h-4 text-white shrink-0" />
+          <Phone className="w-4 h-4 text-white shrink-0 animate-phone-ring" />
           <span>Call Now</span>
         </a>
 

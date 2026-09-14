@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
                   onClick={handleCall}
                   className="flex-1 inline-flex items-center justify-center gap-2 py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition-all shadow-sm group"
                 >
-                  <Phone className="w-3.5 h-3.5 text-white shrink-0" />
+                  <Phone className="w-3.5 h-3.5 text-white shrink-0 animate-phone-ring" />
                   <span>{businessInfo.phone}</span>
                 </button>
                 <button
@@ -159,7 +159,7 @@ export const Footer: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all duration-200 shadow-md active:scale-95 group cursor-pointer"
                 id="footer-call-btn"
               >
-                <Phone className="w-4 h-4 text-white" />
+                <Phone className="w-4 h-4 text-white animate-phone-ring" />
                 <span>Call {businessInfo.phone}</span>
               </a>
 
