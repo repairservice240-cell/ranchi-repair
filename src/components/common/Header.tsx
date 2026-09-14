@@ -24,9 +24,9 @@ export const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-xs transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
 
-        {/* Logo (Shifted to Left) */}
+        {/* Logo (Shifted to Far Left Edge) */}
         <Link to="/" className="flex items-center shrink-0" aria-label="Home">
           <img
             src="/logo.png"
@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = () => {
           />
         </Link>
 
-        {/* Action Buttons (Call & WhatsApp Only) */}
+        {/* Action Buttons (Shifted to Far Right Edge) */}
         <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={`tel:${businessInfo.phone}`}
