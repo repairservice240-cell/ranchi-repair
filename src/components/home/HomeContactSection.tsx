@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSiteContext } from '../../context/SiteContext';
-import { Phone, MessageCircle, Mail, MapPin, Clock, Send, User, ShieldCheck, ThumbsUp, CheckCircle } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, Clock, ShieldCheck, ThumbsUp } from 'lucide-react';
 
 interface HomeContactSectionProps {
   onOpenBooking: () => void;
@@ -8,14 +8,6 @@ interface HomeContactSectionProps {
 
 export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBooking }) => {
   const { businessInfo, trackEvent } = useSiteContext();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    serviceType: 'AC Repair & Service',
-    message: ''
-  });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleCall = () => {
     trackEvent('call_click', `Home Contact Section: ${businessInfo.phone}`);
@@ -28,15 +20,6 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
       `https://wa.me/91${businessInfo.whatsapp.replace(/\D/g, '')}?text=Hi%2C%20I%20need%20appliance%20repair%20service%20in%20Ranchi.`,
       '_blank'
     );
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    trackEvent('form_submit', `Service: ${formData.serviceType}`);
-    setSubmitted(true);
-    setTimeout(() => {
-      onOpenBooking();
-    }, 1500);
   };
 
   const displayPhone = businessInfo.phone && !businessInfo.phone.includes('[') ? businessInfo.phone : '8229893196';
@@ -132,108 +115,40 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
 
           </div>
 
-          {/* Right Column – Send Us a Message Form Card */}
-          <div className="lg:col-span-5">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-200/50 relative">
-              
-              <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-1">
-                Send Us a Message
+          {/* Right Column – Request Immediate Dispatch Card */}
+          <div className="lg:col-span-5 flex items-center">
+            <div className="w-full bg-[#0f1c2e] rounded-3xl p-8 sm:p-10 shadow-2xl shadow-slate-900/40 relative overflow-hidden">
+              {/* subtle decorative glow */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              <h3 className="text-2xl sm:text-3xl font-black text-white leading-snug mb-3 relative z-10">
+                Request Immediate Ranchi<br />Technician Dispatch
               </h3>
-              <p className="text-xs text-slate-500 font-medium mb-6">
-                Fill out the form and we'll get back to you.
+              <p className="text-sm text-slate-400 font-medium mb-8 leading-relaxed relative z-10">
+                Connect with our local customer support manager to confirm technician visit timings in
+                Morabadi, Kanke, Doranda, Harmu, Hatia, Lalpur, Bariatu, or any Ranchi locality.
               </p>
 
-              {submitted ? (
-                <div className="py-10 text-center space-y-3">
-                  <CheckCircle className="w-14 h-14 text-emerald-500 mx-auto animate-bounce" />
-                  <h4 className="text-xl font-black text-slate-900">Thank You!</h4>
-                  <p className="text-xs text-slate-600 font-medium max-w-xs mx-auto">
-                    Your message has been received. Our Ranchi technician team will contact you shortly!
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  
-                  {/* Name & Phone */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div className="relative">
-                      <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                      <input
-                        type="text"
-                        required
-                        placeholder="Your Name *"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full pl-10 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
-                      />
-                    </div>
-                    <div className="relative">
-                      <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                      <input
-                        type="tel"
-                        required
-                        placeholder="Your Phone Number *"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full pl-10 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
-                      />
-                    </div>
-                  </div>
+              {/* Call Button */}
+              <button
+                onClick={handleCall}
+                id="home-dispatch-call-btn"
+                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-blue-700/40 transition-all active:scale-95 mb-4 relative z-10"
+              >
+                <Phone className="w-5 h-5" />
+                Call Customer Helpline ({businessInfo.phone})
+              </button>
 
-                  {/* Email */}
-                  <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                    <input
-                      type="email"
-                      required
-                      placeholder="Your Email *"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-10 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
-                    />
-                  </div>
-
-                  {/* Service Type */}
-                  <div>
-                    <select
-                      value={formData.serviceType}
-                      onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all cursor-pointer"
-                    >
-                      <option value="AC Repair & Service">AC Repair &amp; Service</option>
-                      <option value="Washing Machine Repair">Washing Machine Repair</option>
-                      <option value="Refrigerator Repair">Refrigerator / Fridge Repair</option>
-                      <option value="Microwave Oven Repair">Microwave Oven Repair</option>
-                      <option value="Geyser Repair & Service">Geyser Repair &amp; Service</option>
-                      <option value="General Inquiry">General Inquiry</option>
-                    </select>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <textarea
-                      rows={3}
-                      required
-                      placeholder="Your Message *"
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all resize-none"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-extrabold rounded-xl shadow-lg shadow-blue-600/30 transition-all active:scale-95 flex items-center justify-center gap-2 text-xs sm:text-sm"
-                    id="home-contact-submit-btn"
-                  >
-                    <Send className="w-4 h-4 text-white" />
-                    <span>Send Message</span>
-                  </button>
-
-                </form>
-              )}
-
+              {/* WhatsApp Button */}
+              <button
+                onClick={handleWhatsApp}
+                id="home-dispatch-whatsapp-btn"
+                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-600/40 transition-all active:scale-95 relative z-10"
+              >
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp Direct Message
+              </button>
             </div>
           </div>
 
