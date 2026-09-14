@@ -1,6 +1,6 @@
 import React, { useState, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import { SiteProvider } from './context/SiteContext';
+import { SiteProvider, useSiteContext } from './context/SiteContext';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
 import { StickyMobileBar } from './components/common/StickyMobileBar';
@@ -73,22 +73,18 @@ const ScrollToTop: React.FC = () => {
 };
 
 const AppContent: React.FC = () => {
-  const [bookingOpen, setBookingOpen] = useState(false);
-  const [bookingServiceSlug, setBookingServiceSlug] = useState<string | undefined>(undefined);
-  const [bookingLocality, setBookingLocality] = useState<string | undefined>(undefined);
   const [successLead, setSuccessLead] = useState<ServiceBookingLead | null>(null);
   const { pathname } = useLocation();
+  const { businessInfo } = useSiteContext();
 
   const hideHeaderFooter = pathname.startsWith('/admin') || pathname.startsWith('/login') || pathname.startsWith('/portal');
 
-  const openBooking = (serviceSlug?: string, localityName?: string) => {
-    setBookingServiceSlug(serviceSlug);
-    setBookingLocality(localityName);
-    setBookingOpen(true);
+  // "Book Now" directly dials the business — no form modal
+  const openBooking = (_serviceSlug?: string, _localityName?: string) => {
+    window.location.href = `tel:${businessInfo.phone}`;
   };
 
   const handleBookingSuccess = (lead: ServiceBookingLead) => {
-    setBookingOpen(false);
     setSuccessLead(lead);
   };
 
@@ -156,14 +152,8 @@ const AppContent: React.FC = () => {
       {!hideHeaderFooter && <Footer />}
       {!hideHeaderFooter && <StickyMobileBar onOpenBooking={openBooking} />}
 
-      {/* Global Booking Modal */}
-      <BookingModal
-        isOpen={bookingOpen}
-        initialServiceSlug={bookingServiceSlug}
-        initialLocality={bookingLocality}
-        onClose={() => setBookingOpen(false)}
-        onSuccess={handleBookingSuccess}
-      />
+
+
 
       {/* Booking Success Modal */}
       {successLead && (
