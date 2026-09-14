@@ -73,12 +73,12 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
 
                 {/* WhatsApp Us Row */}
                 <div className="flex items-center gap-4 group cursor-pointer" onClick={handleWhatsApp}>
-                  <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-600/20 group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform duration-300">
                     <MessageCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-[11px] font-bold text-emerald-600 uppercase tracking-wider mb-0.5">WhatsApp Us</div>
-                    <button className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-emerald-600 transition-colors block">
+                    <div className="text-[11px] font-bold text-orange-600 uppercase tracking-wider mb-0.5">WhatsApp Us</div>
+                    <button className="text-base sm:text-lg font-extrabold text-slate-900 group-hover:text-orange-600 transition-colors block">
                       +91 {displayPhone}
                     </button>
                   </div>
@@ -129,7 +129,7 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
                 id="home-dispatch-call-btn"
                 className="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base shadow-md transition-all active:scale-95 mb-3 relative z-10"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5 animate-phone-ring" />
                 Call Customer Helpline ({businessInfo.phone})
               </button>
 
@@ -137,7 +137,7 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
               <button
                 onClick={handleWhatsApp}
                 id="home-dispatch-whatsapp-btn"
-                className="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base shadow-md transition-all active:scale-95 relative z-10"
+                className="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-sm sm:text-base shadow-md transition-all active:scale-95 relative z-10"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp Direct Message
