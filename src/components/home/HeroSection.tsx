@@ -16,22 +16,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking }) => {
 
   return (
     <section className="w-full bg-white overflow-hidden relative">
-      {/* 1370px Max Width Container */}
-      <div className="max-w-[1370px] mx-auto w-full relative">
+      {/* Full Width Edge-to-Edge Container */}
+      <div className="w-full relative">
         
         {/* Banner Wrapper */}
         <div className="relative w-full overflow-hidden bg-white">
           
-          {/* Banner Graphic Image */}
+          {/* Full Width Banner Graphic Image */}
           <img
             src="/images/ranchi-repair-hero-banner.png"
             alt="Ranchi Repair - Trusted Home Appliance Repair Services in Ranchi"
-            className="w-full h-auto block object-contain object-center"
+            className="w-full h-auto block object-cover object-center"
             loading="eager"
           />
 
           {/* Overlaid CTA Buttons Bar */}
-          <div className="absolute left-[4.5%] top-[84%] sm:top-[82%] md:top-[81%] lg:top-[82%] z-20 flex flex-row items-center gap-2.5 sm:gap-4 max-w-[90%] sm:max-w-[50%]">
+          <div className="absolute left-[3%] sm:left-[4%] md:left-[4.5%] top-[84%] sm:top-[82%] md:top-[81%] lg:top-[82%] z-20 flex flex-row items-center gap-2.5 sm:gap-4 max-w-[90%] sm:max-w-[50%]">
             
             {/* Book Service Now Button — Blue Solid */}
             <button
