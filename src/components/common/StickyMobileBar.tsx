@@ -24,24 +24,23 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = () => {
   };
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-2.5 shadow-2xl">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 shadow-2xl">
       <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
         
-        {/* Call Now Button (Glowing Emerald Green) */}
+        {/* Call Now Button (Solid Blue - Matching Header Call Button) */}
         <a
           href={`tel:${businessInfo.phone}`}
           onClick={handleCallClick}
-          className="flex items-center justify-center gap-2 py-3 px-3 bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600 border border-emerald-400/40 active:scale-95 text-white rounded-xl font-extrabold transition-all shadow-lg shadow-emerald-600/35 animate-pulse text-xs text-center"
+          className="flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs text-center"
         >
-          <span className="w-2 h-2 rounded-full bg-white animate-ping shrink-0" />
           <Phone className="w-4 h-4 text-white shrink-0" />
           <span>Call Now</span>
         </a>
 
-        {/* WhatsApp Button */}
+        {/* WhatsApp Button (Solid Orange - Matching Header WhatsApp Button) */}
         <button
           onClick={handleWhatsAppClick}
-          className="flex items-center justify-center gap-2 py-3 px-3 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 active:scale-95 text-white rounded-xl font-extrabold transition-all shadow-md shadow-blue-600/30 text-xs text-center cursor-pointer"
+          className="flex items-center justify-center gap-2 py-3 px-3 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs text-center cursor-pointer"
         >
           <MessageCircle className="w-4 h-4 text-white shrink-0" />
           <span>WhatsApp</span>
