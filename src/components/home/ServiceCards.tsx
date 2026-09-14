@@ -91,19 +91,22 @@ export const ServiceCards: React.FC<ServiceCardsProps> = ({ onOpenBooking }) => 
           })}
         </div>
 
-        {/* Trust Badges */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          {trustBadges.map(({ icon: Icon, title, sub }) => (
+        {/* Trust Badges — 2 col on mobile, 5 col on desktop */}
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+          {trustBadges.map(({ icon: Icon, title, sub }, idx) => (
             <div
               key={title}
-              className="group flex flex-col items-center text-center gap-2 py-5 px-3 bg-white rounded-2xl border border-gray-200 shadow-sm cursor-pointer hover:bg-blue-600 hover:border-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className={`group flex flex-col items-center text-center gap-2 py-4 sm:py-5 px-2 sm:px-3 bg-white rounded-2xl border border-gray-200 shadow-sm cursor-pointer hover:bg-blue-600 hover:border-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300${
+                /* Last item on mobile (5th) spans full width so grid doesn't leave half-row gap */
+                idx === 4 ? ' col-span-2 sm:col-span-1' : ''
+              }`}
             >
-              <div className="w-11 h-11 rounded-full bg-blue-50 group-hover:bg-white/20 flex items-center justify-center transition-colors duration-300">
-                <Icon className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-blue-50 group-hover:bg-white/20 flex items-center justify-center transition-colors duration-300">
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <div>
-                <p className="text-xs font-extrabold text-slate-900 group-hover:text-white transition-colors duration-300">{title}</p>
-                <p className="text-[11px] text-slate-500 group-hover:text-blue-100 font-medium transition-colors duration-300">{sub}</p>
+                <p className="text-xs font-extrabold text-slate-900 group-hover:text-white transition-colors duration-300 leading-tight">{title}</p>
+                <p className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-blue-100 font-medium transition-colors duration-300 mt-0.5">{sub}</p>
               </div>
             </div>
           ))}

@@ -20,7 +20,7 @@ export const HowItWorks: React.FC = () => {
           <p className="text-slate-600 text-base max-w-xl mx-auto font-medium">Fast, reliable doorstep appliance repair across Ranchi</p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {steps.map((s, i) => {
             const Icon = s.icon;
             return (

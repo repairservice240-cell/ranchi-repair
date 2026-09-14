@@ -28,7 +28,7 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
   const addressText = businessInfo.officeAddress && !businessInfo.officeAddress.includes('[') ? businessInfo.officeAddress : 'Lac Factory Road, Hindpiri';
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white border-y border-slate-200/80 relative">
+    <section id="contact" className="py-10 md:py-24 bg-white border-y border-slate-200/80 relative">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -99,12 +99,12 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
 
               </div>
 
-              {/* Appliance Showcase Image */}
-              <div className="flex items-center justify-center p-2 my-4 sm:my-0">
+              {/* Appliance Showcase Image — smaller on mobile */}
+              <div className="flex items-center justify-center p-2 my-2 sm:my-0">
                 <img
                   src="/images/user-appliance-showcase.png"
                   alt="Ranchi Repair AC Fridge Washing Machine Appliances"
-                  className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-[180px] sm:max-w-[280px] md:max-w-[320px] h-auto object-contain filter drop-shadow-md hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
@@ -147,8 +147,8 @@ export const HomeContactSection: React.FC<HomeContactSectionProps> = ({ onOpenBo
 
         </div>
 
-        {/* Bottom 4 Feature / Info Cards Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+        {/* Bottom 4 Feature / Info Cards — 2-col on all screens */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mt-8 sm:mt-12">
           
           {/* Card 1: Our Location */}
           <div className="bg-slate-50/80 rounded-xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex items-center gap-4 text-center sm:text-left group hover:-translate-y-0.5">

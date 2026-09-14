@@ -27,13 +27,14 @@ export const Footer: React.FC = () => {
       {/* Top Gradient Accent Divider Bar */}
       <div className="w-full h-1 bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600 relative z-20" />
 
-      <footer className="bg-slate-900 text-white relative pt-16 pb-36 lg:pb-16 border-t border-slate-800">
+      <footer className="bg-slate-900 text-white relative pt-10 sm:pt-16 pb-36 lg:pb-16 border-t border-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+          {/* Brand: full-width on mobile; cols 2+2 on sm; 3-col on md */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 pb-10 border-b border-slate-800">
 
-            {/* Col 1 – Brand */}
-            <div className="space-y-4">
+            {/* Col 1 – Brand: spans full width on mobile */}
+            <div className="col-span-2 md:col-span-1 space-y-3 sm:space-y-4">
               <Link to="/" className="group inline-block">
                 <img
                   src="/logo.png"
