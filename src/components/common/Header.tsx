@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSiteContext } from '../../context/SiteContext';
 import { Phone, MessageCircle } from 'lucide-react';
 
@@ -9,7 +9,6 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = () => {
   const { businessInfo, trackEvent } = useSiteContext();
-  const location = useLocation();
 
   const handleCall = () => {
     trackEvent('call_click', `Header: ${businessInfo.phone}`);
@@ -23,19 +22,11 @@ export const Header: React.FC<HeaderProps> = () => {
     );
   };
 
-  const navLinks = [
-    { label: 'Home',      href: '/'          },
-    { label: 'Services',  href: '/services/' },
-    { label: 'About Us',  href: '/about-us/' },
-    { label: 'Why Us',    href: '/#why-us'   },
-    { label: 'Contact',   href: '/contact/'  },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-xs transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
 
-        {/* Logo */}
+        {/* Logo (Shifted to Left) */}
         <Link to="/" className="flex items-center shrink-0" aria-label="Home">
           <img
             src="/logo.png"
@@ -44,50 +35,25 @@ export const Header: React.FC<HeaderProps> = () => {
           />
         </Link>
 
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-7">
-          {navLinks.map(link => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={`nav-link${location.pathname === link.href ? ' active' : ''}`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Mobile Direct Phone Link */}
-        <a
-          href={`tel:${businessInfo.phone}`}
-          onClick={handleCall}
-          className="md:hidden inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xs shadow-md active:scale-95 transition-all shrink-0"
-          id="header-mobile-phone-btn"
-          aria-label={`Call ${businessInfo.phone}`}
-        >
-          <Phone className="w-3.5 h-3.5 text-white shrink-0" />
-          <span className="tracking-tight whitespace-nowrap">{businessInfo.phone}</span>
-        </a>
-
-        {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Action Buttons (Call & WhatsApp Only) */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={`tel:${businessInfo.phone}`}
             onClick={handleCall}
-            className="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-sm transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-95 group"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg text-xs sm:text-sm transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-95 group"
             id="header-call-btn"
           >
-            <Phone className="w-4 h-4 text-white" />
-            <span>+91 {businessInfo.phone}</span>
+            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+            <span className="whitespace-nowrap">+91 {businessInfo.phone}</span>
           </a>
 
           <button
             onClick={handleWhatsApp}
-            className="inline-flex items-center gap-2 px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-sm transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-95"
+            className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg text-xs sm:text-sm transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-95"
             id="header-whatsapp-btn"
           >
-            <MessageCircle className="w-4 h-4 text-white" />
-            <span>WhatsApp</span>
+            <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" />
+            <span className="whitespace-nowrap">WhatsApp</span>
           </button>
         </div>
 
