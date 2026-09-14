@@ -52,33 +52,33 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({ onOpenBookin
           {publishedLocalities.map((loc) => (
             <div 
               key={loc.id}
-              className="group bg-gradient-to-br from-white via-slate-50/60 to-blue-50/40 rounded-3xl p-6 border border-slate-200/90 hover:border-blue-500/80 shadow-md hover:shadow-xl hover:shadow-blue-600/15 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 overflow-hidden"
+              className="group bg-white rounded-2xl p-6 border border-slate-200/90 hover:border-blue-500 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between hover:-translate-y-0.5 overflow-hidden"
             >
               <div>
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-blue-600/25 shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/20 shrink-0">
                       <Navigation className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h2 className="font-extrabold text-lg text-slate-900 group-hover:text-blue-600 transition-colors">
                         {loc.name}
                       </h2>
-                      <span className="inline-block text-[11px] font-bold text-blue-700 bg-blue-100/70 px-2 py-0.5 rounded-md mt-0.5">PIN: {loc.pincode}</span>
+                      <span className="inline-block text-[11px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md mt-0.5 border border-blue-100">PIN: {loc.pincode}</span>
                     </div>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-extrabold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 shadow-xs shrink-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     Active
                   </span>
                 </div>
 
-                <p className="text-xs text-slate-600 leading-relaxed mb-4 font-medium">
+                <p className="text-xs text-slate-600 leading-relaxed mb-4 font-normal">
                   {loc.description}
                 </p>
 
                 {/* Available Locality Services */}
-                <div className="space-y-1.5 mb-6 pt-3 border-t border-slate-200/60">
+                <div className="space-y-1.5 mb-6 pt-3 border-t border-slate-100">
                   <div className="text-[11px] font-bold text-blue-800 uppercase tracking-wider mb-1">
                     Locality Services:
                   </div>
@@ -98,7 +98,7 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({ onOpenBookin
 
               <button
                 onClick={() => onOpenBooking?.(undefined, loc.name)}
-                className="w-full py-3 rounded-xl font-extrabold text-xs text-center text-white bg-gradient-to-r from-blue-600 via-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all block shadow-md shadow-blue-600/20 cursor-pointer"
+                className="w-full py-3 rounded-xl font-extrabold text-xs text-center text-white bg-blue-600 hover:bg-blue-700 transition-all block shadow-sm cursor-pointer"
               >
                 Book Technician in {loc.name} &rarr;
               </button>
@@ -106,27 +106,24 @@ export const ServiceAreasPage: React.FC<ServiceAreasPageProps> = ({ onOpenBookin
           ))}
         </div>
 
-        {/* Ranchi Restriction Guarantee Banner - Vibrant Golden Yellow & Amber Gradient Theme */}
-        <div className="p-6 sm:p-8 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 rounded-3xl border-2 border-amber-300 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl shadow-amber-400/30 relative overflow-hidden transition-all duration-300">
-          {/* Subtle Radial Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-48 bg-yellow-200/50 blur-[100px] pointer-events-none rounded-full" />
-
+        {/* Ranchi Restriction Guarantee Banner - Clean Blue & Orange Theme */}
+        <div className="p-6 sm:p-8 bg-slate-900 text-white rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
           <div className="space-y-2 relative z-10">
-            <div className="flex items-center gap-2 text-slate-950 font-black text-xs uppercase tracking-wider">
-              <ShieldCheck className="w-4 h-4 text-emerald-700" />
+            <div className="flex items-center gap-2 text-blue-400 font-bold text-xs uppercase tracking-wider">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>Service Guarantee</span>
             </div>
-            <h3 className="text-xl font-black text-slate-950 tracking-tight">
+            <h3 className="text-xl font-extrabold text-white tracking-tight">
               Do you live in another neighborhood in Ranchi?
             </h3>
-            <p className="text-xs text-slate-900 font-extrabold max-w-2xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal max-w-2xl leading-relaxed">
               We exclusively service Ranchi, Jharkhand. If your locality is not listed above, submit your pincode or address in our booking form for instant technician dispatch.
             </p>
           </div>
 
           <Link
             to="/book-service/"
-            className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black text-xs sm:text-sm shrink-0 transition-all duration-300 shadow-xl shadow-blue-600/35 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-95 border border-blue-400/30 relative z-10"
+            className="px-6 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-xs sm:text-sm shrink-0 transition-all shadow-md active:scale-95 relative z-10"
           >
             Book Ranchi Technician Visit &rarr;
           </Link>
