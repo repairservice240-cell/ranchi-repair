@@ -26,13 +26,17 @@ export const Header: React.FC<HeaderProps> = () => {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-xs transition-all duration-300">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
 
-        {/* Logo (Shifted to Far Left Edge) */}
-        <Link to="/" className="flex items-center shrink-0" aria-label="Home">
+        {/* Logo & Company Name */}
+        <Link to="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0 group" aria-label="Home">
           <img
             src="/logo.png"
             alt={businessInfo.companyName}
-            className="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition-transform duration-300"
+            className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           />
+          <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 leading-none">
+            <span className="text-blue-600">Ranchi</span>
+            <span className="text-orange-500 ml-1">Repair</span>
+          </span>
         </Link>
 
         {/* Action Buttons (Shifted to Far Right Edge) */}

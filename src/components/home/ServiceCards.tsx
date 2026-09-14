@@ -78,7 +78,7 @@ export const ServiceCards: React.FC<ServiceCardsProps> = ({ onOpenBooking }) => 
                   {/* Book Now Button */}
                   <button
                     onClick={() => onOpenBooking(service.slug)}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs rounded-lg shadow-md hover:-translate-y-0.5 transition-all shrink-0 active:scale-95"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs rounded-lg shadow-md hover:-translate-y-0.5 transition-all shrink-0 active:scale-95 animate-pulse"
                     id={`service-card-book-${service.id}`}
                   >
                     <Calendar className="w-3.5 h-3.5 text-white" />
