@@ -24,29 +24,30 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = () => {
   };
 
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 shadow-2xl">
-      <div className="grid grid-cols-2 gap-3 max-w-md mx-auto">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 shadow-2xl w-full max-w-full overflow-hidden mobile-safe-bottom">
+      <div className="grid grid-cols-2 gap-2.5 w-full max-w-md mx-auto">
         
-        {/* Call Now Button (Solid Blue - Matching Header Call Button) */}
+        {/* Call Now Button */}
         <a
           href={`tel:${businessInfo.phone}`}
           onClick={handleCallClick}
-          className="flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs text-center"
+          className="flex items-center justify-center gap-1.5 py-2.5 px-2 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs sm:text-sm text-center min-w-0"
         >
           <Phone className="w-4 h-4 text-white shrink-0 animate-phone-ring" />
-          <span>Call Now</span>
+          <span className="truncate">Call Now</span>
         </a>
 
-        {/* WhatsApp Button (Solid Orange - Matching Header WhatsApp Button) */}
+        {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
-          className="flex items-center justify-center gap-2 py-3 px-3 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs text-center cursor-pointer"
+          className="flex items-center justify-center gap-1.5 py-2.5 px-2 bg-orange-500 hover:bg-orange-600 active:scale-95 text-white rounded-xl font-bold transition-all shadow-md text-xs sm:text-sm text-center cursor-pointer min-w-0"
         >
           <MessageCircle className="w-4 h-4 text-white shrink-0" />
-          <span>WhatsApp</span>
+          <span className="truncate">WhatsApp</span>
         </button>
 
       </div>
     </div>
   );
 };
+

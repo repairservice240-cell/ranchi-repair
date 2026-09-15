@@ -30,11 +30,11 @@ export const Footer: React.FC = () => {
       <footer className="bg-slate-900 text-white relative pt-10 sm:pt-16 pb-36 lg:pb-16 border-t border-slate-800">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          {/* Brand: full-width on mobile; cols 2+2 on sm; 3-col on md */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 pb-10 border-b border-slate-800">
+          {/* 1-col on mobile, 2-col on sm, 3-col on md */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 pb-10 border-b border-slate-800">
 
-            {/* Col 1 – Brand: spans full width on mobile */}
-            <div className="col-span-2 md:col-span-1 space-y-3 sm:space-y-4">
+            {/* Col 1 – Brand: full width on mobile */}
+            <div className="sm:col-span-2 md:col-span-1 space-y-3 sm:space-y-4">
               <Link to="/" className="group inline-block">
                 <img
                   src="/logo.png"
