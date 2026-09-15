@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = () => {
             id="header-call-btn"
             aria-label="Call us"
           >
-            <Phone className="w-4 h-4 sm:w-4 sm:h-4 text-white shrink-0" />
+            <Phone className="w-4 h-4 sm:w-4 sm:h-4 text-white shrink-0 animate-phone-ring" />
             {/* Phone number: hidden on xs, short on sm, full on md+ */}
             <span className="hidden sm:inline whitespace-nowrap">+91 {businessInfo.phone}</span>
           </a>
