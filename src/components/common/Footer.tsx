@@ -176,9 +176,23 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Bottom bar */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-normal">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-normal border-t border-slate-800/60 mt-4">
             <p>© {new Date().getFullYear()} {businessInfo.companyName}. All rights reserved. Serving Ranchi, Jharkhand.</p>
-            <p className="font-bold text-orange-400">Home Appliance Repair &amp; Service in Ranchi</p>
+            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3">
+              <p className="font-bold text-orange-400">Home Appliance Repair &amp; Service in Ranchi</p>
+              <span className="hidden sm:inline text-slate-600">•</span>
+              <p className="text-slate-400">
+                Developed by{' '}
+                <a
+                  href="https://amicitechsolutions.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-blue-400 hover:text-orange-400 transition-colors underline decoration-blue-400/40 hover:decoration-orange-400"
+                >
+                  ATS
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
